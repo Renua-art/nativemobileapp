@@ -6,14 +6,14 @@
 
         <GridLayout>
             <Lessons />
-            <ShoppingCart />
+            <Checkout />
         </GridLayout>
     </Page>
 </template>
 
 <script>
   import Lessons from './views/Lessons.vue'
-  import ShoppingCart from './views/ShoppingCart.vue'
+  import Checkout from './views/Checkout.vue'
   export default {
     computed: {
       message() {
