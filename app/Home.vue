@@ -5,8 +5,16 @@
         </ActionBar>
 
         <GridLayout>
-            <Lessons />
-            <Checkout />
+            <TabView :selectedIndex="selectedIndex" @selectedIndexChange="indexChange">
+                <TabViewItem title="Lessons">
+                    <Lessons />
+                </TabViewItem>
+                <TabViewItem title="Checkout">
+                    <Checkout />
+                </TabViewItem>
+            </TabView>
+            
+            
         </GridLayout>
     </Page>
 </template>
@@ -19,7 +27,13 @@
       message() {
         return "Vue Lessons";
       }
+    },
+    methods: {
+    indexChange: function(args) {
+        let newIndex = args.value
+        console.log('Current Tab Index: ' + newIndex)
     }
+}
   };
 </script>
 
