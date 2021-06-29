@@ -69,7 +69,7 @@ export default new Vuex.Store({
                 method: 'GET',
                 redirect: 'follow'
             }
-            await fetch(`http://restapicoursework.herokuapp.com/lessons`, requestOptions)
+            await fetch(`http://renuabackend.herokuapp.com/lessons`, requestOptions)
                 .then(response => response.json())
                 .then(data => commit('setLessons', data))
                 .catch(error => console.log('error', error));
