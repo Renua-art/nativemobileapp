@@ -1,21 +1,19 @@
 <template>
     <Page>
         <ActionBar>
-            <Label text="Home"/>
+            <Label text="Vue lessons"/>
         </ActionBar>
 
         <GridLayout>
-            <Label class="info">
-                <FormattedString>
-                    <Span class="fas" text.decode="&#xf135; "/>
-                    <Span :text="message"/>
-                </FormattedString>
-            </Label>
+            <Lessons />
+            <ShoppingCart />
         </GridLayout>
     </Page>
 </template>
 
 <script>
+  import Lessons from './views/Lessons.vue'
+  import ShoppingCart from './views/ShoppingCart.vue'
   export default {
     computed: {
       message() {
